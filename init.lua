@@ -1,0 +1,6 @@
+require("kylian.plugins-setup")
+require("kylian.core.options")
+require("kylian.core.keymaps")
+require("kylian.core.colorscheme")
+require("kylian.plugins.comment")
+require("kylian.plugins.nvim-tree")
