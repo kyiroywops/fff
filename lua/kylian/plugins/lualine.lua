@@ -1,6 +1,11 @@
-local status, lualine = pcall(require, "lualine")
+l status, lualine = pcall(require, "lualine")
 if not status then
   return
 end
 
-lualine.setup()
+-- configure lualine with modified theme
+lualine.setup({
+  options = {
+    theme = lualine_nightfly,
+  },
+})
