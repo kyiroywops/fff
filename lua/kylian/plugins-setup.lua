@@ -38,22 +38,28 @@ return packer.startup(function(use)
 
   use("szw/vim-maximizer") -- maximizes and restores current window
 
--- essential plugins
-use("tpope/vim-surround")
-use("vim-scripts/ReplaceWithRegister")
+  -- essential plugins
+  use("tpope/vim-surround")
+  use("vim-scripts/ReplaceWithRegister")
 
--- commenting with gc
-use("numToStr/Comment.nvim")
+  -- commenting with gc
+  use("numToStr/Comment.nvim")
 
--- file explorer
+  -- file explorer
 
-use("nvim-tree/nvim-tree.lua")
+  use("nvim-tree/nvim-tree.lua")
 
--- icons
-use("kyazdani42/nvim-web-devicons")
+  -- icons
+  use("kyazdani42/nvim-web-devicons")
 
--- statusline
-use("nvim-lualine/lualine.nvim")
+  -- statusline
+  use("nvim-lualine/lualine.nvim")
+
+  -- fuzzy finding w/ telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
+
 
   if packer_bootstrap then
     require("packer").sync()
